@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Event In JS</title>
+</head>
+<body>
+    <h1 onclick="console.log('heading clicked')">Hello Im exploring JS Events</h1>
+
+    <button onclick="console.log(7)">Click me</button>
+    <button onclick="console.log(70)">Another btn</button>
+    <button onclick="document.body.style.backgroundColor = 'red'">Make Red</button>
+    <button onclick="makeYellow()">Make Yellow</button>
+    <button onclick="makeDefault()">Make Default</button>
+
+    <button id="make-blue">Make Blue</button>
+    <button id="make-aqua">Make Aqua</button>
+
+    <button id="make-pink">Make pink</button>
+    <button id="make-green">Make green</button>
+
+    <button id="make-tomato">Make Tomato</button>
+
+
+
+    <script src="./js/event.js"></script>
+    <script>
+        document.getElementById('make-tomato').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'tomato'
+        })
+        
+    </script>
+</body>
+</html>

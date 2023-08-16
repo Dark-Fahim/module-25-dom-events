@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new Comment </title>
+</head>
+<body>
+    <h1>Please Add your Comment</h1>
+    <div id="post-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nihil reiciendis minima a molestias quibusdam distinctio cupiditate exercitationem id sit accusamus, accusantium incidunt necessitatibus praesentium autem nam, assumenda doloribus tempora fuga atque voluptate cumque, neque natus repudiandae? Cupiditate, pariatur. Harum laborum minima error praesentium totam, rerum deleniti accusantium vel inventore.</p>
+        <p>Accusantium, aperiam? Eligendi, numquam architecto sint aut provident odio quasi et, sit minus veniam harum laborum quis necessitatibus! Aliquam quibusdam tempore libero molestiae dolores quia quod possimus corporis, dicta nam tenetur, quisquam at neque sequi nisi incidunt. Tempore, ipsum dignissimos obcaecati incidunt dolore maiores nostrum eaque reprehenderit, corrupti, voluptate quo?</p>
+        <p>Aliquam asperiores quas perferendis doloribus ex ducimus quo maxime possimus quasi voluptates voluptate dolore facilis corporis minima quae consequatur eligendi tenetur, repellat dolor nisi mollitia. Incidunt nulla inventore adipisci ut harum voluptatum, itaque similique pariatur ad ipsam voluptatem autem omnis perferendis deserunt soluta culpa facilis vitae consectetur! In, magnam architecto?</p>
+    </div>
+
+
+    <div>
+        <textarea name="" id="new-post" cols="60" rows="10"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+    </div>
+
+
+
+    <script>
+        //step 1: add event listener to the post button
+        document.getElementById('btn-post').addEventListener('click', function(){
+            //step 2: get the comment 
+            const postBox = document.getElementById('new-post');
+            const newPost = postBox.value;
+            
+            //step 3: set the post inside the post container
+            const postContainer = document.getElementById('post-container');
+            const post = document.createElement('p');
+            post.innerText = newPost;
+            postContainer.appendChild(post)
+
+            //steo 4: clear the post box
+            postBox.value = ''
+        })
+    </script>
+</body>
+</html>
